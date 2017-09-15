@@ -1,5 +1,6 @@
 // dependencias
 require('dotenv').config();
+var cors = require('cors');
 var config = require('./config');
 var express = require('express');
 var mongoose = require('mongoose');
@@ -15,6 +16,7 @@ mongoose.connect(config.database);
 // configuración del servidor
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cors());
 
 // rutas
 app.use('/', api);
