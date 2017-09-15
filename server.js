@@ -20,6 +20,6 @@ app.use(bodyParser.json());
 app.use('/', api);
 
 // lanzar servidor
-app.listen(config.port, function () {
+app.listen(config.port, "0.0.0.0", function () {
 	console.log('Servidor funcionando!');
 });
