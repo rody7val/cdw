@@ -1,0 +1,4 @@
+node_modules
+web-ejemplo-cdw
+*.log
+*.env

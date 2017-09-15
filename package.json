@@ -1,0 +1,22 @@
+{
+  "name": "cdw",
+  "version": "1.0.0",
+  "description": "Servidor de ejemplo para el curso de diseño web del centro de formación profecional Pigüé",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Rodolfo Valguarnera <rod7val@gmail.com> (https://github.com/rody7val/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rody7val/cdw.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11"
+  }
+}
