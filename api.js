@@ -11,7 +11,7 @@ module.exports = function (express) {
 	// noticias
 	api.get('/notices', noticeController.all);
 	api.get('/notices/:noticeId', noticeController.show);
-	api.post('/notices', noticeController.new, noticeController.all);
+	api.post('/notices', noticeController.new);
 	api.post('/notices/:noticeId/delete', noticeController.delete, noticeController.all);
 
 	return api;
