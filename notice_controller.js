@@ -36,6 +36,7 @@ exports.edit = function (req, res) {
 	req.notice.title = req.body.notice.title;
 	req.notice.email = req.body.notice.email;
 	req.notice.content = req.body.notice.content;
+	req.notice.img = req.body.notice.img;
 
 	req.notice.save(function (err, notice) {
 		res.json(notice);

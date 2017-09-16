@@ -5,6 +5,7 @@ var NoticeSchema = new Schema({
 	title: String,
     email: String,
 	content: String,
+	img: String,
 	date: {type: Number, default: Date.now}
 });
 
