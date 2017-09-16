@@ -1,7 +1,7 @@
 {
   "name": "cdw",
   "version": "1.0.0",
-  "description": "Servidor de ejemplo para el curso de diseño web del centro de formación profecional Pigüé",
+  "description": "Servidor de ejemplo para el curso de diseño web del centro de formación profesional Pigüé",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
