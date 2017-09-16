@@ -32,6 +32,16 @@ exports.show = function (req, res) {
 	res.json(req.notice);
 }
 
+exports.edit = function (req, res) {
+	req.notice.title = req.body.notice.title;
+	req.notice.email = req.body.notice.email;
+	req.notice.content = req.body.notice.content;
+
+	req.notice.save(function (err, notice) {
+		res.json(notice);
+	});
+}
+
 exports.delete = function (req, res, next) {
 	Notice
 	.findOne({ _id: req.notice._id })

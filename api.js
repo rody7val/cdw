@@ -12,6 +12,7 @@ module.exports = function (express) {
 	api.get('/notices', noticeController.all);
 	api.get('/notices/:noticeId', noticeController.show);
 	api.post('/notices', noticeController.new);
+	api.post('/notices/:noticeId/edit', noticeController.edit);
 	api.post('/notices/:noticeId/delete', noticeController.delete, noticeController.all);
 
 	return api;
