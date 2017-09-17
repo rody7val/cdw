@@ -39,8 +39,8 @@ exports.edit = function (req, res) {
 	req.notice.email = req.body.notice.email;
 	req.notice.content = req.body.notice.content;
 
-	Notice.findByIdAndUpdate(req.notice._id, req.notice, function (err, notice) {
-		res.json(notice);
+	req.notice.save(function (err) {
+		res.json(req.notice);
 	});
 }
 
