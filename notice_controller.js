@@ -40,7 +40,7 @@ exports.edit = function (req, res) {
 	req.notice.content = req.body.notice.content;
 	req.notice.img = req.body.notice.img;
 
-	req.notice.save(function (err, notice) {
+	Notice.finByIdAndUpdate(req.notice._id, req.notice, function (err, notice) {
 		res.json(notice);
 	});
 }
