@@ -34,13 +34,14 @@ exports.show = function (req, res) {
 	res.json(req.notice);
 }
 
-exports.edit = function (req, res) {
+exports.edit = function (req, res, next) {
 	req.notice.title = req.body.notice.title;
 	req.notice.email = req.body.notice.email;
 	req.notice.content = req.body.notice.content;
 
 	req.notice.save(function (err) {
-		res.json(req.notice);
+		if (err) console.log(err);
+		next();
 	});
 }
 
