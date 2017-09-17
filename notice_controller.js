@@ -16,6 +16,7 @@ exports.load = function(req, res, next, noticeId) {
 exports.all = function (req, res) {
 	Notice
 	.find()
+	.sort('-date')
 	.exec(function (err, notices) {
 		res.json(notices);
 	})
