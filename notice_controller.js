@@ -21,10 +21,11 @@ exports.all = function (req, res) {
 	})
 }
 
-exports.new = function (req, res) {
+exports.new = function (req, res, next) {
 	var notice = new Notice(req.body.notice);
-	notice.save(function (err, notice) {
-		res.json(notice);
+	notice.save(function (err) {
+		if (err) console.log(err);
+		next();
 	});
 }
 
